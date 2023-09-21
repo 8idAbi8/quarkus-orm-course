@@ -1,6 +1,4 @@
-/*
-The ArtistRepository class serves as a repository for interacting with an SQL database to persist and retrieve Artist entities.
-*/
+/*The ArtistRepository class serves as a repository for interacting with an SQL database to persist and retrieve Artist entities.*/
 
 package quarkus.jdbc;
 

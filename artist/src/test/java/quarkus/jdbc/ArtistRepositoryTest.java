@@ -4,6 +4,8 @@ import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -14,7 +16,7 @@ public class ArtistRepositoryTest {
     ArtistRepository repository;
 
     @Test
-    public void shouldCreateAndFindAnArtist() {
+    public void shouldCreateAndFindAnArtist() throws SQLException {
         Artist artist = new Artist("name", "bio");
 
         repository.persist(artist);
