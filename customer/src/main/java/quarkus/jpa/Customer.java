@@ -3,8 +3,8 @@ package quarkus.jpa;
 import jakarta.persistence.*;
 import java.time.Instant;
 
-@Entity
-@Table(name = "t_customers")
+@Entity     // mark a Java class as a persistent entity
+@Table(name = "t_customers")    //  JPA annotation used at the class level to specify the details of the database table to which the entity (Java class) is mapped.
 public class Customer {
 
     // ======================================
@@ -88,5 +88,4 @@ public class Customer {
                 ", createdDate=" + createdDate +
                 '}';
     }
-
 }
