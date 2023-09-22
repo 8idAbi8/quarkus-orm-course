@@ -1,8 +1,9 @@
-package quarkus.panache;
+package quarkus.panache.repository;
 
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
+import quarkus.panache.model.Publisher;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

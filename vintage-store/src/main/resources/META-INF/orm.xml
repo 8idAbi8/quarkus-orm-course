@@ -1,0 +1,17 @@
+<!-- The orm.xml file is part of the JPA specification and allows to define the mapping of a Java class to a database table
+without using annotations directly in the Java source code. -->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm" version="3.0">
+
+    <entity class="quarkus.jdbc.Artist">
+        <table name="t_artists"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="AUTO"
+            </id>
+        </attributes>
+
+    </entity>
+</entity-mappings>
+
