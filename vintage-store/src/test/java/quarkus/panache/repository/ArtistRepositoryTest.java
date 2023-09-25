@@ -1,6 +1,7 @@
 
 package quarkus.panache.repository;
 
+import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
@@ -18,6 +19,7 @@ public class ArtistRepositoryTest {
     ArtistRepository repository;
 
     @Test
+    @TestTransaction
     public void shouldCreateAndFindAnArtist() throws SQLException {
         Artist artist = new Artist("name", "bio");
 

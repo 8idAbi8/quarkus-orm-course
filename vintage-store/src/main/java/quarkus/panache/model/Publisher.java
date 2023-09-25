@@ -1,7 +1,9 @@
 package quarkus.panache.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 import java.time.Instant;
 
@@ -13,9 +15,12 @@ import java.time.Instant;
 * By default, Panache entities have an automatically generated identifier (ID) for each instance.
 * */
 @Entity
+@Table(name = "t_publishers")
 public class Publisher extends PanacheEntity { // Publisher is
 
+    @Column(length = 50, nullable = false)
     public String name;
+    @Column(name = "created_date", nullable = false)
     public Instant createdDate = Instant.now();
 
     public Publisher() {
