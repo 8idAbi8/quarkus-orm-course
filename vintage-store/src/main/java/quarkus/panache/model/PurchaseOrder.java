@@ -16,7 +16,7 @@ public class PurchaseOrder extends PanacheEntity {
     @Column(name = "purchase_order_date", nullable = false)
     public LocalDate date = LocalDate.now();
 
-    /* one instance of the entity on one side (the "one" side) can be related to multiple instances of the other entity (the "many" side).(1 orderline for item bought)
+    /* one PurchaseOrder can have many associated OrderLines -> one instance of the entity on one side (the "one" side) can be related to multiple instances of the other entity (the "many" side).(1 orderline for item bought)
        By default this relationship is mapped with join table. If we don't want to use a joinTable, we can add the "mappedBy" attribute in the OneToMany annotation. */
     /* In JPA, the cascade attribute within the @OneToMany or @ManyToOne annotations
        is used to specify the cascade operations that should be applied to associated entities
