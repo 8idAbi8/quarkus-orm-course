@@ -24,6 +24,9 @@ public class PurchaseOrder extends PanacheEntity {
        The orphanRemoval ensures that if an associated entity is removed from the association,  it should be considered "orphaned" and hence removed from the database.*/
     @OneToMany(mappedBy = "purchaseOrder", cascade = {CascadeType.REMOVE, CascadeType.PERSIST}, orphanRemoval = true)
     public List<OrderLine> orderLines = new ArrayList<>();
+    /*This annotation defines a One-to-Many relationship between PurchaseOrder (the owning entity) and OrderLine (the associated entity).
+    * mappedBy = "purchaseOrder": This specifies that the mapping for this One-to-Many relationship is done by the "purchaseOrder" field in the OrderLine entity. 
+      This means that the "purchaseOrder" field in OrderLine is the owning side of the relationship.*/
 
 
     /* Many purchase order can belong to one customer, one customer can have many purchase orders.
